@@ -13,6 +13,7 @@ RUN apt-get update -q -q && \
   add-apt-repository "deb https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" && \
   apt-get update -q -q && \
   ssh-keygen -A && \
+  mkdir /run/sshd && \
   echo "root:!9Pr1nces" | chpasswd && \
   apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ~/.cache ~/.npm
 
