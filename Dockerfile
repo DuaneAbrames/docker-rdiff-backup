@@ -11,4 +11,4 @@ RUN sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ~/.cache ~/.npm
 
 EXPOSE 22
-CMD ["/usr/sbin/sshd"]
+CMD ["/usr/sbin/sshd","-D"]
